@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<nz-layout>
+      <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed">
+        <div class="logo">
+        </div>
+        <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'">
+          
+          <li [routerLink]="['/create']" nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">Criar Campanha</span></span></li>
+          <li [routerLink]="['/']" nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">Lista</span></span></li>
+        </ul>
+      </nz-sider>
+      <nz-layout>
+        <nz-content style="margin:24px 16px;">
+        	<router-outlet></router-outlet>
+        </nz-content>
+        <nz-footer style="text-align: center;">Artisan - Desenvolvido em 2018</nz-footer>
+      </nz-layout>
+    </nz-layout>

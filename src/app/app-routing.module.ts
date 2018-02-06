@@ -1,11 +1,16 @@
-import { HomeComponent } from './components/home/home.component';
+import { ListaComponent } from './components/lista/lista.component';
+import { CreateComponent } from './components/create/create.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
     {
+        path: 'create',
+        component: CreateComponent
+    },
+    {
         path: '',
-        component: HomeComponent
+        component: ListaComponent
     }
 ];
 
